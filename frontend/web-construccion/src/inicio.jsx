@@ -39,6 +39,7 @@ class Inicio extends Component {
     render(){
         return (
 
+            //Cada componente declarado puede usare como si fuera codigo HTML común
             <MuiThemeProvider>
         	<div>
               <div className={"ald"}> </div>
