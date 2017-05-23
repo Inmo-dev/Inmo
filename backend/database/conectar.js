@@ -8,5 +8,5 @@ _mongoose.connect('mongodb://localhost/test', function(err) {
     }
 });
 
-
+//En cualquier punto del codigo se puede acceder al ORM
 global.mongo = _mongoose;

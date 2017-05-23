@@ -1,3 +1,5 @@
+//Mongoose es un ORN de MongoDB, este es un ejemplo de un modelo de mongoose, para un usuario
+//ya que esta data se manejara en PostgreSQL, MongoDB se usará para data geográfica
 var _mongoose = require("mongoose");
 var sha256 = require("sha256");
 
@@ -83,4 +85,5 @@ var _usuarioSchema = new _mongoose.Schema({
     }
 });
 
+//Se exporta el modelo hechos
 module.exports = global.mongo.model('Usuario', _usuarioSchema);
