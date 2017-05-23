@@ -1,0 +1,31 @@
+{
+  "name": "Inmo backend",
+  "version": "0.1.0",
+  "description": "REST API backend perteneciente a inmo.",
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/Inmo-dev/Inmo.git"
+  },
+  "main": "servidor.js",
+  "scripts": {
+    "iniciar": "nodemon servidor.js"
+  },
+  "author": "Inmo-dev",
+  "license": "VER LICENCIA EN LA RAIZ DEL REPOSITORIO",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "compression": "*",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "helmet": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "sequelize": "^3.30.4",
+    "sha256": "^0.2.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
