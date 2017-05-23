@@ -7,6 +7,7 @@ Especificaciones no concluidas.
 Esta barra y menú debe tener, en funcion a si el usuario está logeado o no:  
 
 _(*NL*: No logeado)_  
+
 Componente | Descripción | Estado  
 ---|---|---  
 Botón de login. _(NL)_ | Ir a pantalla de login | Sin asignar ❌ 
@@ -24,14 +25,16 @@ Boton de busar | Hace la busqueda | Sin asignar ❌
 Es la pantalla que se muestra mientras una aplicación está cargando una pantalla, es la primera vez que se inicia, o se encuentra descargando algo. Debe ser el logo y una animación sencilla.
 
 _Ejemplo, el logo de youtube se muestra mientras carga la aplicación._  
-![Ejemplo](https://www.bignerdranch.com/assets/img/blog/2015/08/youtube_splash.gif)
+![Ejemplo](https://www.bignerdranch.com/assets/img/blog/2015/08/youtube_splash.gif)  
+
 Componente | Descripción | Estado  
 ---|---|---  
 Splash| - |Sin asignar ❌ 
 ##### 1.3 - Búsqueda. 🚧
 Permite realizar una busqueda sencilla o avanzada al usuario mediante diferentes criterios **sin mostrar mapa**. Muestra inmuebles populares en la zona, inmuebles destacados, inmuebles más vistos.
 
-_*: Búsqueda avanzada_
+_*: Búsqueda avanzada_  
+
 Componente | Descripción | Estado  
 ---|---|---  
 Selección de tipo de inmueble | Casa, Local, etc.. | Sin asignar ❌ 
