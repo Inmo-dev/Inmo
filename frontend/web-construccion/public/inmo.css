@@ -7,19 +7,6 @@
 	to { background-position: left bottom; }
 }
 
-/*.ald	{ 
-  min-height: 100%;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  filter: blur(5px);
-  background-image: url(https://stalbert.ca/global/images/headers/City-Map-banner.jpg);
-  background-repeat: repeat;
-  animation: animatedBackground 30s linear infinite;
-}*/
 body {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -101,8 +88,6 @@ body {
     animation-duration: 10s;
 }
 
-#f1 {
-}
 #f2 {
     -webkit-animation-delay: -2s;
 }

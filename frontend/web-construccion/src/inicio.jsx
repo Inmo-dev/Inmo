@@ -1,16 +1,28 @@
+//Polyfill son todas las funciones que aun no se implementan en ES5
 import "babel-polyfill";
+//React
 import React, { Component } from 'react';
+//React DOM es el motor de visualizacion para html DOM
 import { render } from 'react-dom';
+//Carrusel material
 import { AutoRotatingCarousel, Slide } from 'material-auto-rotating-carousel'
+//Colores material
 import { red400, red600, blue400, blue600, cyan100, cyan300, orange400, orange600, lightGreen400, lightGreen600} from 'material-ui/styles/colors'
+//Necesario para funciones en dispositivos moviles
 import injectTapEventPlugin from 'react-tap-event-plugin';
+//Necesaio para usar material-ui, da estilo a todos los componentes
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-///
 
 
+//Debe ser lo primero en ejecutar al usar material-ui
 injectTapEventPlugin();
 
+//Cada componente es una clase que extienden de react/Component
 class LogoMulti extends Component {
+
+  //Un componente debe retornar solamente *UN* nodo DOM, si el componente está compuesto
+  //por varios otros componentes, es comun encerrarlo todo en un <div> *solo si es neces
+  //sario*, a veces es mejor separarlo en sub-componentes.
     render(){
         return(
             <div className={"fadein"}>
@@ -75,4 +87,6 @@ class Inicio extends Component {
     }
 }
 
+//Se le indica a react que toda la aplicacion se va a dibujar en este contenedor. Una aplicacion
+//react debe tener solamente un componente raiz, en este caso la raiz es el componente <Inicio>
 render(<Inicio />, document.getElementById('contenedor'));
