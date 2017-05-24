@@ -2,6 +2,7 @@
 
 Especificaciones no concluidas.  
 _Leyenda (pantallas):_  
+
 Simbolo | Significado 
 ---|---
 🚧| En analisis
@@ -103,7 +104,8 @@ Link al correo de soporte | soporte@inmo.co.ve | Sin asignar ❌
 Muestra el perfil de un cliente, las formas de contactarlo, etc..  
 
 _(\*: En caso de perfil de usuario actual)_  
-_(\*\*: En caso de usuario logeado)_
+_(\*\*: En caso de usuario logeado)_  
+
 Componente | Descripción | Estado  
 ---|---|--- 
 Nombres y Apellidos | Nombre completo del cliente | Sin asignar ❌
@@ -155,7 +157,8 @@ Boton de registro como inmobiliaria | Va a la pantalla de registrar inmobiliaria
 ##### 1.13 - Registro cliente.  🆗  
 Permite que se registre un cliente, pide datos y hace validaciones.  
 
-_\*:obligatorio_
+_\*:obligatorio_  
+
 Componente | Descripción | Estado  
 ---|---|--- 
 Nombre de usuario\* | Sólo letras minusculas, números y \_- | Sin asignar ❌
@@ -173,7 +176,8 @@ Botón de registrar | Registra el usuario, lo lleva a la pagina de confirmacion 
 ##### 1.14 - Registro inmobiliaria. 🆗
 Permite que se registre una inmobiliaria, pide datos y hace validaciones.  
 
-_\*:obligatorio_
+_\*:obligatorio_  
+
 Componente | Descripción | Estado  
 ---|---|--- 
 Nombre de usuario\* | Sólo letras minusculas, números y \_- | Sin asignar ❌
@@ -190,7 +194,8 @@ Botón de registrar | Registra la inmobiliaria, lo lleva a la pagina de confirma
 ##### 1.15 - Vista de inmueble. 🚧
 Muestra todos los datos posibles de un inmueble, y las maneras de contactar las inmobiliarias que lo tienen a disposicion.  
 
-_\*:obligatorio_ 
+_\*:obligatorio_  
+
 Componente | Descripción | Estado  
 ---|---|--- 
 Fotos del inmueble |Todas las fotos disponibles |  Sin asignar ❌
