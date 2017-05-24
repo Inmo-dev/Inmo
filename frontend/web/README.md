@@ -12,7 +12,7 @@ Simbolo | Significado
 
 ## 1. Pantallas
 
-##### 1.1 - Barra y menu general visble en todas las pantallas. 🆗
+##### 1.1 - Barra y menu general visble en todas las pantallas. ⚒
 Esta barra y menú debe tener, en funcion a si el usuario está logeado o no:  
 
 _(*NL*: No logeado)_  
@@ -39,7 +39,7 @@ _Ejemplo, el logo de youtube se muestra mientras carga la aplicación._
 Componente | Descripción | Estado  
 ---|---|---  
 Splash| - |Sin asignar ❌ 
-##### 1.3 - Búsqueda. _(Página principal)_ 🚧
+##### 1.3 - Búsqueda. _(Página principal)_  🆗
 Permite realizar una busqueda sencilla o avanzada al usuario mediante diferentes criterios **sin mostrar mapa**. Muestra inmuebles populares en la zona, inmuebles destacados, inmuebles más vistos.
 
 _*: Búsqueda avanzada_  
@@ -72,7 +72,7 @@ Boton "Olvide mi contraseña" | Va a pagina de recuperacion de cuenta|Sin asigna
 Boton "Registrarse" | Va a pagina de registro|Sin asignar ❌ 
 Texto de mensaje | En caso de error muestra un mensaje sobe el intento de login |Sin asignar ❌ 
 
-##### 1.5 - Sobre nosotros. 🚧  
+##### 1.5 - Sobre nosotros.  🆗  
 Se encarga de mostrar toda la informacion referente a Inmo, de manera atractiva a los usuarios interesados. 
 
 Componente | Descripción | Estado  
@@ -81,7 +81,7 @@ Redaccion sobre Inmo, imagenes, videos, presentaciones etc .. | - | Sin asignar 
 Links hacia las redes sociales de inmo |-| Sin asignar ❌ 
 Boton "Contacto" | Lleva a la pantalla de contacto | Sin asignar ❌
 
-##### 1.6 - Contacto. 🚧
+##### 1.6 - Contacto.  🆗
 Lista todas las maneras posibles de contactar con Inmo, redes sociales, telefonos oficiales, emails, oficinas, etc..
 
 Componente | Descripción | Estado  
@@ -91,7 +91,7 @@ Links a redes sociales | - | Sin asignar ❌
 Telefono/s | De ser posible | Sin asignar ❌
 Email | De cada departamento | Sin asignar ❌
 
-##### 1.7 - Preguntas frecuentes. 🚧
+##### 1.7 - Preguntas frecuentes.  🆗
 Seleccion interactiva de preguntas frecuentes sobre Inmo, sus sistemas, o la forma de trabajar de las inmobiliarias. Debe tener una referencia al correo de soporte _soporte@inmo.co.ve_  
 
 Componente | Descripción | Estado  
@@ -99,7 +99,7 @@ Componente | Descripción | Estado
 Redaccion interactiva de preguntas frecuentes | - | Sin asignar ❌ 
 Link al correo de soporte | soporte@inmo.co.ve | Sin asignar ❌ 
 
-##### 1.8 - Perfil cliente. 🚧
+##### 1.8 - Perfil cliente.  🆗
 Muestra el perfil de un cliente, las formas de contactarlo, etc..  
 
 _(\*: En caso de perfil de usuario actual)_  
@@ -126,7 +126,7 @@ Cuadro de mensaje | Informa si el email no existe o confirmar que se envió | Si
 Captcha | Evita un ataque de fuerza bruta a la BD | Sin asignar ❌ 
 
 
-##### 1.11 - Perfil inmobiliaria. 🚧
+##### 1.11 - Perfil inmobiliaria.  🆗
 Muestra el pefil de una compañia inmobiliaria y las formas de contactarle  
 _(\*: En caso de perfil de usuario actual)_  
 _(\*\*: En caso de usuario logeado)_  
@@ -143,14 +143,68 @@ Mensaje\*\* | Enviar un mensaje | Sin asignar ❌
 Boton editar perfil\* | Va a la pantalla de edicion del perfil | Sin asignar ❌
 Boton ver inmuebles | Ir a pantalla de ver inmuebles de inmobiliaria | Sin asignar ❌
 
-##### 1.12 - Registro. 🚧
-##### 1.13 - Registro cliente. 🚧
-##### 1.14 - Registro inmobiliaria. 🚧
+##### 1.12 - Registro. 🆗
+Debe mostrar las diferencias entre una cuenta de usuario y una cuenta de inmobiliaria. 
+
+Componente | Descripción | Estado  
+---|---|--- 
+Descripcion de cada tipo de cuenta| Especifica las diferencias|Sin asignar ❌
+Boton de registro como usuario | Va a la pantalla de registrar usuario | Sin asignar ❌
+Boton de registro como inmobiliaria | Va a la pantalla de registrar inmobiliaria | Sin asignar ❌
+
+##### 1.13 - Registro cliente.  🆗  
+Permite que se registre un cliente, pide datos y hace validaciones.  
+
+_\*:obligatorio_
+Componente | Descripción | Estado  
+---|---|--- 
+Nombre de usuario\* | Sólo letras minusculas, números y \_- | Sin asignar ❌
+Contraseña\* | Minimo 6 caracteres | Sin asignar ❌
+Confirmacion de contraseña\* | Tienen que coincidir ambas | Sin asignar ❌
+Nombres\* | Los nombres de la persona |  Sin asignar ❌
+Email\* | Email |  Sin asignar ❌
+Confirmacion de Email\* | Tiene que coincidir ambos |  Sin asignar ❌
+Apellidos | Apellidos de la persona |  Sin asignar ❌
+Direccion | Direccion donde vive |  Sin asignar ❌
+Celular | Celular del cliente |  Sin asignar ❌
+Botón de registrar | Registra el usuario, lo lleva a la pagina de confirmacion de correo |  Sin asignar ❌
+
+
+##### 1.14 - Registro inmobiliaria. 🆗
+Permite que se registre una inmobiliaria, pide datos y hace validaciones.  
+
+_\*:obligatorio_
+Componente | Descripción | Estado  
+---|---|--- 
+Nombre de usuario\* | Sólo letras minusculas, números y \_- | Sin asignar ❌
+Contraseña\* | Minimo 6 caracteres | Sin asignar ❌
+Confirmacion de contraseña\* | Tienen que coincidir ambas | Sin asignar ❌
+Nombre\* | Nombre de la empresa |  Sin asignar ❌
+Email\* | Email |  Sin asignar ❌
+Confirmacion de Email\* | Tiene que coincidir ambos |  Sin asignar ❌
+RIF\* | RIF de la empresa |  Sin asignar ❌
+Direccion\* | Direccion de la empresa |  Sin asignar ❌
+Telefono\* | Telefono de contacto de la inmobiliaria |  Sin asignar ❌
+Botón de registrar | Registra la inmobiliaria, lo lleva a la pagina de confirmacion de correo |  Sin asignar ❌
+
+##### 1.15 - Vista de inmueble. 🚧
+Muestra todos los datos posibles de un inmueble, y las maneras de contactar las inmobiliarias que lo tienen a disposicion.  
+
+_\*:obligatorio_
+Componente | Descripción | Estado  
+---|---|--- 
+Fotos del inmueble |Todas las fotos disponibles |  Sin asignar ❌
+Videos del inmueble |Todas los videos disponibles |  Sin asignar ❌
+Tipo de inmueble | Local, Casa, etc.. |  Sin asignar ❌
+Tipo de contrato | Alquiler, Venta, etc.. |  Sin asignar ❌
+Estado | Estado del pais |  Sin asignar ❌
+Ciudad | Ciudad del pais | Sin asignar ❌
+
 ##### 1.16 - Editar perfil. 🚧
 ##### 1.17 - Editar inmueble. 🚧
 ##### 1.18 - Configuracion. 🚧
 ##### 1.19 - Resultado de busqueda. 🚧
-##### 1.20 - Vista de inmueble. 🚧
+
 ##### 1.21 - Busqueda interactiva. 🚧
 ---
 ## 2. Por Considerar
