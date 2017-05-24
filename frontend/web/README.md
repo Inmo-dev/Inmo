@@ -2,7 +2,6 @@
 
 Especificaciones no concluidas.  
 _Leyenda (pantallas):_  
-
 Simbolo | Significado 
 ---|---
 🚧| En analisis
@@ -17,6 +16,8 @@ Simbolo | Significado
 Esta barra y menú debe tener, en funcion a si el usuario está logeado o no:  
 
 _(*NL*: No logeado)_  
+_(*I*: Inmobiliaria)_  
+_(*A*: Administrador)_
 
 Componente | Descripción | Estado  
 ---|---|---  
@@ -25,6 +26,7 @@ Botón de registro. _(NL)_ | Ir a pantalla de registro | Sin asignar ❌
 Botón de ir a perfil. | Ir al perfil personal | Sin asignar ❌ 
 Botón de ir a configuraciones. | Ir a configuraciones | Sin asignar ❌ 
 Botón de ir a pantalla de búsqueda. | Ir a pantalla de busqueda | Sin asignar ❌ 
+Botón de agregar inmueble (I). | Ir a pantalla de agregar inmueble | Sin asignar ❌ 
 Foto de perfil. | Ir al perfil personal |  Sin asignar ❌ 
 Correo electronico | Ir al perfil personal | Sin asignar ❌ 
 Nombre del usuario | Ir al perfil personal | Sin asignar ❌ 
@@ -104,8 +106,7 @@ Link al correo de soporte | soporte@inmo.co.ve | Sin asignar ❌
 Muestra el perfil de un cliente, las formas de contactarlo, etc..  
 
 _(\*: En caso de perfil de usuario actual)_  
-_(\*\*: En caso de usuario logeado)_  
-
+_(\*\*: En caso de usuario logeado)_
 Componente | Descripción | Estado  
 ---|---|--- 
 Nombres y Apellidos | Nombre completo del cliente | Sin asignar ❌
@@ -144,6 +145,8 @@ Foto de perfil | Foto de perfil de inmobiliaria | Sin asignar ❌
 Mensaje\*\* | Enviar un mensaje | Sin asignar ❌
 Boton editar perfil\* | Va a la pantalla de edicion del perfil | Sin asignar ❌
 Boton ver inmuebles | Ir a pantalla de ver inmuebles de inmobiliaria | Sin asignar ❌
+Comentarios | Comentarios de usuarios | Sin asignar ❌
+Calificacion | Calificacion de usuarios | Sin asignar ❌
 
 ##### 1.12 - Registro. 🆗
 Debe mostrar las diferencias entre una cuenta de usuario y una cuenta de inmobiliaria. 
@@ -157,8 +160,7 @@ Boton de registro como inmobiliaria | Va a la pantalla de registrar inmobiliaria
 ##### 1.13 - Registro cliente.  🆗  
 Permite que se registre un cliente, pide datos y hace validaciones.  
 
-_\*:obligatorio_  
-
+_\*:obligatorio_
 Componente | Descripción | Estado  
 ---|---|--- 
 Nombre de usuario\* | Sólo letras minusculas, números y \_- | Sin asignar ❌
@@ -176,8 +178,7 @@ Botón de registrar | Registra el usuario, lo lleva a la pagina de confirmacion 
 ##### 1.14 - Registro inmobiliaria. 🆗
 Permite que se registre una inmobiliaria, pide datos y hace validaciones.  
 
-_\*:obligatorio_  
-
+_\*:obligatorio_
 Componente | Descripción | Estado  
 ---|---|--- 
 Nombre de usuario\* | Sólo letras minusculas, números y \_- | Sin asignar ❌
@@ -194,8 +195,6 @@ Botón de registrar | Registra la inmobiliaria, lo lleva a la pagina de confirma
 ##### 1.15 - Vista de inmueble. 🚧
 Muestra todos los datos posibles de un inmueble, y las maneras de contactar las inmobiliarias que lo tienen a disposicion.  
 
-_\*:obligatorio_  
-
 Componente | Descripción | Estado  
 ---|---|--- 
 Fotos del inmueble |Todas las fotos disponibles |  Sin asignar ❌
@@ -204,13 +203,38 @@ Tipo de inmueble | Local, Casa, etc.. |  Sin asignar ❌
 Tipo de contrato | Alquiler, Venta, etc.. |  Sin asignar ❌
 Estado | Estado del pais |  Sin asignar ❌
 Ciudad | Ciudad del pais | Sin asignar ❌
+Inmobiliarias que lo venden | Con su contacto | Sin asignar ❌
+Indice de precio | Bajo/Medio/Alto | Sin asignar ❌
+Calificacion de usuarios | Bajo/Medio/Alto | Sin asignar ❌
+Comentarios de usuarios | - | Sin asignar ❌
+Formulario de enviar comentario | Si es usuario registrado | Sin asignar ❌
 
 ##### 1.16 - Editar perfil. 🚧
-##### 1.17 - Editar inmueble. 🚧
-##### 1.18 - Configuracion. 🚧
-##### 1.19 - Resultado de busqueda. 🚧
+Opcion de editar todos los datos personales del perfil.
 
-##### 1.21 - Busqueda interactiva. 🚧
+Componente | Descripción | Estado  
+---|---|---
+Subir foto de perfil | Tamaño maximo 500x500 px | Sin asignar ❌
+Cambiar email | - |Sin asignar ❌
+Cambiar direccion | - | Sin asignar ❌
+Cambiar descripcion | - | Sin asignar ❌
+Cambiar redes sociales | - | Sin asignar ❌
+Guardar cambios | - | Sin asignar ❌
+
+##### 1.17 - Resultado de busqueda. 🚧
+Muestra una lista de resultados de búsqueda.
+
+Componente | Descripción | Estado  
+---|---|---
+Lista de inmuebles | Debe tener una imagen, el lugar, la indicacion del precio, cuantas inmobiliarias lo tienen, cuantos comentarios | Sin asignar ❌
+Filtros de ordenamiento por indicadores | Indicador de precio, inmobiliarias, comentarios, popularidad, etc.. | Sin asignar ❌
+
+##### 1.18 - Configuracion. 🚧
+##### 1.19 - Editar inmueble. 🚧
+##### 1.20 - Busqueda interactiva. 🚧
+##### 1.21 - Denunciar publicación. 🚧
+##### 1.22 - Chat. 🚧
+
 ---
 ## 2. Por Considerar
 - Pagar para que un inmueble sea destacado
