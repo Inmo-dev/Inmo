@@ -190,7 +190,7 @@ Botón de registrar | Registra la inmobiliaria, lo lleva a la pagina de confirma
 ##### 1.15 - Vista de inmueble. 🚧
 Muestra todos los datos posibles de un inmueble, y las maneras de contactar las inmobiliarias que lo tienen a disposicion.  
 
-_\*:obligatorio_
+_\*:obligatorio_ 
 Componente | Descripción | Estado  
 ---|---|--- 
 Fotos del inmueble |Todas las fotos disponibles |  Sin asignar ❌
