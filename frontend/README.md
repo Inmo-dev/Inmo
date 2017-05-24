@@ -1,6 +1,5 @@
 Método de trabajo
 ====
----
 
 Javascript es un lenguaje que ha evolucionado en su sintaxis, sin embargo esta sintaxis
 aún no es soportada por todos los navegadores, es por eso que se usa un proceso de transpilación

@@ -1,8 +1,8 @@
 # Especificaciones del sistema
----
+
 Especificaciones no concluidas.
 ## 1. Pantallas
-***
+
 ##### 1.1 - Barra y menu general visble en todas las pantallas. 🚧
 Esta barra y menú debe tener, en funcion a si el usuario está logeado o no:  
 
@@ -41,5 +41,59 @@ Selección de tipo de inmueble | Casa, Local, etc.. | Sin asignar ❌
 Seleccion de tipo de contraro | Venta, Alquiler, etc.. | Sin asignar ❌ 
 Selección de ciudad | Ciudad a buscar/Nacional | Sin asignar ❌ 
 Selección de puntos de interes* | Escuela, Hospital, etc.. | Sin asignar ❌  
-Radio de búsqueda* | Si se tiene ubicación | Sin asignar ❌ 
-Selección de precio* | Rango / Máximo | Sin asignar ❌ 
+Selección de radio puntos de interes* | Distancia a la que un punto de interes se toma en cuenta | Sin asignar ❌  
+Selección de precio* | Alto/Medio/Bajo | Sin asignar ❌ 
+Selección de caracteristica* | Cuartos, Baños, Pisos etc.. | Sin asignar ❌ 
+Selección de dueño anterior* | Si es usado o nuevo | Sin asignar ❌ 
+Avalada por perito* | Si el precio está auditado | Sin asignar ❌ 
+Botón ir a mapa | Va al mapa interactivo | Sin asignar ❌ 
+Inmuebles destacados | 3 inmuebles destacados | Sin asignar ❌ 
+
+
+##### 1.5 - Login. 🚧  
+{Descripcion} 
+
+Componente | Descripción | Estado  
+---|---|--- 
+Nombre de usuario|Usuario|Sin asignar ❌ 
+Contraseña|Contraseña|Sin asignar ❌ 
+Boton "Login" |Inicia el proceso de logear, y va a pagina de busqueda|Sin asignar ❌ 
+Boton "Login with Facebook" | Logea con cuenta de facebook y va a pagina de busqueda|Sin asignar ❌ 
+Boton "Olvide mi contraseña" | Va a pagina de recuperacion de cuenta|Sin asignar ❌ 
+Boton "Registrarse" | Va a pagina de registro|Sin asignar ❌ 
+
+##### 1.6 - Sobre nosotros. 🚧  
+{Descripcion}  
+
+Componente | Descripción | Estado  
+---|---|--- 
+Redaccion sobre Inmo, imagenes, videos, presentaciones etc .. | - | Sin asignar ❌ 
+Links hacia las redes sociales de inmo |-| Sin asignar ❌ 
+
+##### 1.7 - Inmobiliarias. 🚧
+##### 1.8 - Contacto. 🚧
+##### 1.9 - Preguntas frecuentes. 🚧
+##### 1.10 - Perfil cliente. 🚧
+##### 1.11 - Perfil inmobiliaria. 🚧
+##### 1.12 - Registro. 🚧
+##### 1.13 - Registro cliente. 🚧
+##### 1.14 - Registro inmobiliaria. 🚧
+
+##### 1.15 - Olvide mi clave. 🚧  
+{Descripcion}  
+
+Componente | Descripción | Estado  
+---|---|--- 
+Ingreso de correo electronico|-|Sin asignar ❌ 
+Boton recuperar contraseña|-|Sin asignar ❌ 
+Cuadro de mensaje | Informa si el email no existe o confirmar que se envió | Sin asignar ❌ 
+
+##### 1.16 - Editar perfil. 🚧
+##### 1.17 - Editar inmueble. 🚧
+##### 1.18 - Configuracion. 🚧
+##### 1.19 - Resultado de busqueda. 🚧
+##### 1.20 - Vista de inmueble. 🚧
+##### 1.21 - Busqueda interactiva. 🚧
+---
+## 2. Por Considerar
+Pagar para que un inmueble sea destacado
