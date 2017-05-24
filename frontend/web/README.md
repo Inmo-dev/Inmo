@@ -1,9 +1,7 @@
 # Especificaciones del sistema
 
-Especificaciones no concluidas.   
-
+Especificaciones no concluidas.  
 _Leyenda (pantallas):_  
-
 Simbolo | Significado 
 ---|---
 🚧| En analisis
@@ -105,8 +103,7 @@ Link al correo de soporte | soporte@inmo.co.ve | Sin asignar ❌
 Muestra el perfil de un cliente, las formas de contactarlo, etc..  
 
 _(\*: En caso de perfil de usuario actual)_  
-_(\*\*: En caso de usuario logeado)_  
-
+_(\*\*: En caso de usuario logeado)_
 Componente | Descripción | Estado  
 ---|---|--- 
 Nombres y Apellidos | Nombre completo del cliente | Sin asignar ❌
@@ -128,8 +125,24 @@ Boton recuperar contraseña| Inicia el proceso de recuperación |Sin asignar ❌
 Cuadro de mensaje | Informa si el email no existe o confirmar que se envió | Sin asignar ❌ 
 Captcha | Evita un ataque de fuerza bruta a la BD | Sin asignar ❌ 
 
-##### 1.10 - Inmobiliarias. 🚧
+
 ##### 1.11 - Perfil inmobiliaria. 🚧
+Muestra el pefil de una compañia inmobiliaria y las formas de contactarle  
+_(\*: En caso de perfil de usuario actual)_  
+_(\*\*: En caso de usuario logeado)_  
+
+Componente | Descripción | Estado  
+---|---|--- 
+Nombres | Nombre completo de la inmobiliaria | Sin asignar ❌
+Telefono/s | Telefono de la inmobiliaria | Sin asignar ❌
+Email | Email de la inmobiliaria | Sin asignar ❌
+Descripcion | Texto de descripcion de la inmobiliaria | Sin asignar ❌
+Redes sociales | Links a las redes sociales de inmobiliaria | Sin asignar ❌
+Foto de perfil | Foto de perfil de inmobiliaria | Sin asignar ❌
+Mensaje\*\* | Enviar un mensaje | Sin asignar ❌
+Boton editar perfil\* | Va a la pantalla de edicion del perfil | Sin asignar ❌
+Boton ver inmuebles | Ir a pantalla de ver inmuebles de inmobiliaria | Sin asignar ❌
+
 ##### 1.12 - Registro. 🚧
 ##### 1.13 - Registro cliente. 🚧
 ##### 1.14 - Registro inmobiliaria. 🚧
@@ -141,4 +154,5 @@ Captcha | Evita un ataque de fuerza bruta a la BD | Sin asignar ❌
 ##### 1.21 - Busqueda interactiva. 🚧
 ---
 ## 2. Por Considerar
-Pagar para que un inmueble sea destacado
+- Pagar para que un inmueble sea destacado
+- Listar todas las inmobiliarias (pantalla Inmobiliarias)
