@@ -14,6 +14,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 //Componentes principales//
 import Divider from 'material-ui/Divider';
 import BarraYDrawer from './componentes/BarraYDrawer/barraYDrawer.jsx';
+import Lorem from './componentes/LoremIpsum/loremIpsum.jsx'
 //
 
 //Codigo
@@ -26,14 +27,14 @@ class Inicio extends Component {
         	<MuiThemeProvider>
         		<div>
         			<BarraYDrawer />
+            			<img 
+            				src="img/logo-g.png" 
+            				height="200" width="200" 
+            				style={{"margin":"auto", "display":"block"}}
+            				/>
 
-        			<img 
-        				src="img/logo-g.png" 
-        				height="200" width="200" 
-        				style={{"margin":"auto", "display":"block"}}
-        				/>
-
-        			<Divider/>
+            			<Divider/>
+                        <Lorem />
         		</div>
         	</MuiThemeProvider>
         	);

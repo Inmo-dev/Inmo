@@ -22,7 +22,9 @@ class Barra extends Component {
 	 
     render(){
         return (
-        		<Toolbar>
+        		<Toolbar 
+        			style={{position:"fixed", width:"100%"}}
+        			>
         			<ToolbarGroup 
         				firstChild={true}
         				>
