@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 ///
 import Divider from 'material-ui/Divider';
 import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer';
 import Avatar from 'material-ui/Avatar';
-import Person from 'material-ui/svg-icons/social/person';
 import Build from 'material-ui/svg-icons/action/build';
 import Map from 'material-ui/svg-icons/maps/map';
 import Search from 'material-ui/svg-icons/action/search';
@@ -27,14 +27,16 @@ class InmoDrawer extends Component {
 
 				 <Card  style={{backgroundColor: '#2196F3'}}>
 					<CardHeader
-					  title="Jesus Rondon"
-					  subtitle="jesus@rondon.com"
-					  avatar={<Avatar size={40} icon={<Person />}></Avatar> }
+					  title={this.props.usuario.nombre + " " + this.props.usuario.apellido}
+					  subtitle={this.props.usuario.correo}
+					  avatar={<Avatar size={40} 
+					  				  src={this.props.usuario.fotoPerfil}
+					  				  /> }
 					/>
 
 					<CardActions>
-					  <FlatButton icon={<Language />} hoverColor="rgba(0, 0, 0, 0)" style={{paddingLeft:"150px", color:"red"}} />
-					  <FlatButton icon={<Message />} hoverColor="rgba(0, 0, 0, 0)" style={{float:"right"}} />
+					  <FlatButton icon={<Language />} hoverColor="rgba(0, 0, 0, 0)" style={{marginLeft:"90px"}} />
+					  <FlatButton icon={<Message />} hoverColor="rgba(0, 0, 0, 0)" style={{marginLeft:"0px"}} />
 					</CardActions>
 				</Card>
 					         
@@ -48,4 +50,10 @@ class InmoDrawer extends Component {
     }
 }
 
-export default InmoDrawer
+function mapStateToProps(state){
+  return {
+    usuario: state.sesion.usuario
+  };
+}
+
+export default connect(mapStateToProps)(InmoDrawer)

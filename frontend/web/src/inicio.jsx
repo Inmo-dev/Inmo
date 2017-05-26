@@ -10,32 +10,24 @@ import { Router, Route, IndexRoute, IndexLink, hashHistory, Link } from 'react-r
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 //Necesario para funciones en dispositivos moviles
 import injectTapEventPlugin from 'react-tap-event-plugin';
-///////////////////////////
-//Componentes principales//
-import Divider from 'material-ui/Divider';
-import BarraYDrawer from './componentes/BarraYDrawer/barraYDrawer.jsx';
-import Lorem from './componentes/LoremIpsum/loremIpsum.jsx'
-//
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import Aplicacion from './componentes/Aplicacion/aplicacion.jsx';
+import Estado from './reducers/estado.jsx'
 
-//Codigo
 //Debe ser lo primero en ejecutar al usar material-ui
 injectTapEventPlugin();
+
+//Estado de la aplicacion
+const store = createStore(Estado);
 
 class Inicio extends Component {
     render(){
         return (
         	<MuiThemeProvider>
-        		<div>
-        			<BarraYDrawer />
-            			<img 
-            				src="img/logo-g.png" 
-            				height="200" width="200" 
-            				style={{"margin":"auto", "display":"block"}}
-            				/>
-
-            			<Divider/>
-                        <Lorem />
-        		</div>
+                <Provider store={store}>
+        		  <Aplicacion />
+                </Provider>
         	</MuiThemeProvider>
         	);
     }

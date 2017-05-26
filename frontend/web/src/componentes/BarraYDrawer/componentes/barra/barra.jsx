@@ -11,6 +11,7 @@ import FlatButton from 'material-ui/FlatButton';
 	clickRegistro
 */
 class Barra extends Component {
+	//TODO: Refactorizar, este estado no va, integrar con redux
 	constructor(props) {
 		super(props);
 		this.state ={

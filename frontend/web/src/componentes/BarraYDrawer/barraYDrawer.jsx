@@ -1,47 +1,40 @@
 import React, { Component } from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 import Barra from './componentes/barra/barra.jsx';
 import Drawer from './componentes/drawer/drawer.jsx';
+import {alternarDrawer} from '../../acciones/interfaz.jsx';
 
-/*Props
-   usuario
-   msgPorLeer
-   notPorVer
-   titulo
-   
-   clickMenu
-   clickIniciarSesion
-   clickRegistro
-*/
+
 class BarraYDrawer extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-        open: false,
-        usuario:'',
-        titulo:'Inmo',
-        msgPorLeer:0,
-        notPorVer:0
-    };
-  }
-
-  clickBoton = () => this.setState({open: !this.state.open});
-
   render(){
     return (
         <div>
             <Barra 
-                titulo={this.state.titulo}
-                clickMenu={this.clickBoton}
+                titulo={this.props.titulo}
+                clickMenu={() => this.props.clickBoton(this.props.open)}
                 />
 
             <Drawer 
-                open={this.state.open}
-                onRequestChange={this.clickBoton}
+                open={this.props.open}
+                onRequestChange={() => this.props.clickBoton(this.props.open)}
                 />  
         </div>                     
     );
   }
 }
 
-export default BarraYDrawer
+function mapStateToProps(state){
+  return {
+    titulo: state.interfaz.titulo,
+    open: state.interfaz.open
+  };
+}
+
+function matchDispatchToProps(dispatch){
+  return bindActionCreators({
+    clickBoton: alternarDrawer
+  }, dispatch);
+}
+
+export default connect(mapStateToProps, matchDispatchToProps)(BarraYDrawer);
