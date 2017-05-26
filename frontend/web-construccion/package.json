@@ -27,7 +27,7 @@
   },
   "scripts": {
     "automatico": "webpack -d --watch",
-    "compilar": "webpack",
+    "compilar": "webpack -p --define process.env.NODE_ENV='\"production\"'",
     "servidor": "serve ./public"
   }
 }
