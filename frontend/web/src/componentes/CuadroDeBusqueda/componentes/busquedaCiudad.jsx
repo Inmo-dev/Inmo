@@ -55,11 +55,6 @@ class BusquedaCiudad extends Component{
 						dataSource={listaAyuda} 
 						fullWidth={false} 
 						maxSearchResults={5}  
-						
-					
-						
-						
-						
 	  			    />
 
 			   </div>
