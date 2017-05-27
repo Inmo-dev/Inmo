@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { irAPaginaIniciarSesion, irAPaginaRegistrar } from '../../../../acciones/interfaz.jsx';
+//
 import { Toolbar, ToolbarGroup, ToolbarTitle, ToolbarSeparator} from 'material-ui/Toolbar';
 import NavigationMenuIcon from 'material-ui/svg-icons/navigation/menu';
 import IconButton from 'material-ui/IconButton';
@@ -11,16 +16,6 @@ import FlatButton from 'material-ui/FlatButton';
 	clickRegistro
 */
 class Barra extends Component {
-	//TODO: Refactorizar, este estado no va, integrar con redux
-	constructor(props) {
-		super(props);
-		this.state ={
-			titulo:'',
-			clickMenu:''
-		}
-		console.log(this.props);
-	}
-	 
     render(){
         return (
         		<Toolbar 
@@ -57,12 +52,14 @@ class Barra extends Component {
 				    <ToolbarGroup>
 				    	<FlatButton 
 				    		label="Registrate" 
-				    		backgroundColor="#a4c639"				    		
+				    		backgroundColor="#a4c639"
+				    		onTouchTap={() => this.props.clickRegistro(this.props.history)}				    		
 				    		/>
 
 			          	<FlatButton 
 			          		label="Inicia sesión" 
-			          		backgroundColor="#a4c639"			          		
+			          		backgroundColor="#a4c639"	
+			          		onTouchTap={() => this.props.clickLogin(this.props.history)}		          		
 			          		/>
 
 			        </ToolbarGroup>
@@ -71,4 +68,11 @@ class Barra extends Component {
     }
 }
 
-export default Barra
+function matchDispatchToProps(dispatch){
+  return bindActionCreators({
+    clickRegistro: irAPaginaRegistrar,
+    clickLogin: irAPaginaIniciarSesion
+  }, dispatch);
+}
+
+export default connect(null, matchDispatchToProps)(withRouter(Barra));

@@ -5,6 +5,7 @@ import {ACCION_ALTERNAR_DRAWER, ACCION_BUSCAR} from '../acciones/indice.jsx';
 
 export default function(state, action){
 	console.log(action.type);
+	
 	switch(action.type){
 		case ACCION_ALTERNAR_DRAWER:
 			return Object.assign(state, {open: action.payload});

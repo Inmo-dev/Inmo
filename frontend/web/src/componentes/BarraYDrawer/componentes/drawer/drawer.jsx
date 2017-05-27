@@ -1,8 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {irAPaginaBuscar} from '../../../../acciones/interfaz.jsx';
 import { withRouter } from 'react-router-dom';
+
+import { irAPaginaBuscar, 
+		irAPaginaConfiguracion, 
+		irAPaginaInmueblesGuardados,
+		irAPaginaMapa,
+		irAPaginaPerfil,
+		irAPaginaMensajes,
+		irAPaginaNotificaciones } from '../../../../acciones/interfaz.jsx';
+
 ///
 import Divider from 'material-ui/Divider';
 import MenuItem from 'material-ui/MenuItem';
@@ -28,23 +36,54 @@ class InmoDrawer extends Component {
                 onRequestChange={this.props.onRequestChange}
 				>
 
-				 <Card  style={{backgroundColor: '#2196F3'}}>
+				 <Card 
+				 	style={{backgroundColor: '#2196F3'}}
+				 	>
+
+				 	<div 
+				 		onTouchTap={() => this.props.clickPerfil(this.props.history)}
+				 		style={{cursor:"hand"}}
+				 		>
 					<CardHeader
 					  title={this.props.usuario.nombre + " " + this.props.usuario.apellido}
 					  subtitle={this.props.usuario.correo}
 					  avatar={<Avatar size={40} 
 					  				  src={this.props.usuario.fotoPerfil}
-					  				  /> }
+					  				  />}
 					/>
+					</div>
 
 					<CardActions>
-					  <FlatButton icon={<Language />} hoverColor="rgba(0, 0, 0, 0)" style={{marginLeft:"90px"}} />
-					  <FlatButton icon={<Message />} hoverColor="rgba(0, 0, 0, 0)" style={{marginLeft:"0px"}} />
+					  <FlatButton 
+					  	icon={<Language />} 
+					  	hoverColor="rgba(0, 0, 0, 0)" 
+					  	style={{marginLeft:"90px"}} 
+					  	onTouchTap={() => this.props.clickNotificaciones(this.props.history)}
+					  	/>
+
+					  <FlatButton 
+					  	icon={<Message />} 
+					  	hoverColor="rgba(0, 0, 0, 0)" 
+					  	style={{marginLeft:"0px"}} 
+					  	onTouchTap={() => this.props.clickMensajes(this.props.history)}
+					  	/>
+
 					</CardActions>
 				</Card>
 					         
-				<MenuItem leftIcon={<Build />} >Configuración</MenuItem>
-				<MenuItem leftIcon={<Bookmark />} >Inmuebles guardados</MenuItem>
+				<MenuItem 
+					leftIcon={<Build />} 
+					onTouchTap={() => this.props.clickConfiguracion(this.props.history)}
+					>
+					Configuración
+				</MenuItem>
+				
+				<MenuItem 
+					leftIcon={<Bookmark />}
+					onTouchTap={() => this.props.clickInmueblesGuardados(this.props.history)}
+					>
+					Inmuebles guardados
+				</MenuItem>
 
 				<MenuItem 
 					leftIcon={<Search />}
@@ -53,7 +92,12 @@ class InmoDrawer extends Component {
 					Buscar
 				</MenuItem>
 
-				<MenuItem leftIcon={<Map />} >Mapa</MenuItem>
+				<MenuItem 
+					leftIcon={<Map />}
+					onTouchTap={() => this.props.clickMapa(this.props.history)}
+					>
+					Mapa
+				</MenuItem>
 
 			</Drawer>
         	);
@@ -74,7 +118,13 @@ function mapStateToProps(state){
 
 function matchDispatchToProps(dispatch){
   return bindActionCreators({
-    clickBuscar: irAPaginaBuscar
+    clickBuscar: irAPaginaBuscar,
+    clickConfiguracion: irAPaginaConfiguracion,
+    clickInmueblesGuardados: irAPaginaInmueblesGuardados,
+    clickMapa: irAPaginaMapa,
+    clickPerfil: irAPaginaPerfil,
+    clickMensajes: irAPaginaMensajes,
+    clickNotificaciones: irAPaginaNotificaciones
   }, dispatch);
 }
 
