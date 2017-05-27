@@ -1,4 +1,5 @@
 node_modules/
+public/inmo.js
 yarn.lock
 yarn-error.log
 .firebaserc
