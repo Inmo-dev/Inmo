@@ -18,7 +18,7 @@ class BarraYDrawer extends Component {
             <Drawer 
                 open={this.props.open}
                 onRequestChange={() => this.props.clickBoton(this.props.open)}
-                />  
+                /> 
         </div>                     
     );
   }

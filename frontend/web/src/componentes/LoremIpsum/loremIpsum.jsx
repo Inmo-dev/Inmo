@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Divider from 'material-ui/Divider';
+import CuadroDeBusqueda from '../CuadroDeBusqueda/cuadroDeBusqueda.jsx';
 
 class Lorem extends Component {
     render(){

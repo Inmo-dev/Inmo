@@ -4,10 +4,10 @@ import "babel-polyfill";
 import React, { Component } from 'react';
 //React DOM es el motor de visualizacion para html DOM
 import { render } from 'react-dom';
-//React-router, para hacer una Single Page App
-import { Router, Route, IndexRoute, IndexLink, hashHistory, Link } from 'react-router';
 //Necesaio para usar material-ui, da estilo a todos los componentes
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+//React-router, para hacer una Single Page App
+import { HashRouter as Router} from 'react-router-dom'; 
 //Necesario para funciones en dispositivos moviles
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {createStore} from 'redux';
@@ -26,7 +26,9 @@ class Inicio extends Component {
         return (
         	<MuiThemeProvider>
                 <Provider store={store}>
-        		  <Aplicacion />
+                	<Router>
+                		<Aplicacion />
+                	</Router>
                 </Provider>
         	</MuiThemeProvider>
         	);

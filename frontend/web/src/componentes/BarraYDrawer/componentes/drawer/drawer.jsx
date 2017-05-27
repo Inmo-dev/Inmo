@@ -1,5 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import {irAPaginaBuscar} from '../../../../acciones/interfaz.jsx';
+import { withRouter } from 'react-router-dom';
 ///
 import Divider from 'material-ui/Divider';
 import MenuItem from 'material-ui/MenuItem';
@@ -42,7 +45,14 @@ class InmoDrawer extends Component {
 					         
 				<MenuItem leftIcon={<Build />} >Configuración</MenuItem>
 				<MenuItem leftIcon={<Bookmark />} >Inmuebles guardados</MenuItem>
-				<MenuItem leftIcon={<Search />} >Buscar</MenuItem>
+
+				<MenuItem 
+					leftIcon={<Search />}
+					onTouchTap={() => this.props.clickBuscar(this.props.history)}
+					>
+					Buscar
+				</MenuItem>
+
 				<MenuItem leftIcon={<Map />} >Mapa</MenuItem>
 
 			</Drawer>
@@ -50,10 +60,22 @@ class InmoDrawer extends Component {
     }
 }
 
+InmoDrawer.contextTypes = {
+  router: PropTypes.shape({
+    history: PropTypes.object.isRequired
+  })
+};
+
 function mapStateToProps(state){
   return {
     usuario: state.sesion.usuario
   };
 }
 
-export default connect(mapStateToProps)(InmoDrawer)
+function matchDispatchToProps(dispatch){
+  return bindActionCreators({
+    clickBuscar: irAPaginaBuscar
+  }, dispatch);
+}
+
+export default connect(mapStateToProps, matchDispatchToProps)(withRouter(InmoDrawer))

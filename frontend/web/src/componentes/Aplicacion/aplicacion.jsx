@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
-import Divider from 'material-ui/Divider';
+import {Route, Switch} from 'react-router-dom'; 
 import BarraYDrawer from '../BarraYDrawer/barraYDrawer.jsx';
+//Rutas
 import Lorem from '../LoremIpsum/loremIpsum.jsx'
-
+import PaginaBusqueda from '../PaginaBusqueda/paginaBusqueda.jsx';
 
 class Aplicacion extends Component {
     render(){
         return (
         		<div>
-	    			<BarraYDrawer />
-	    			<img 
-	    				src="img/logo-g.png" 
-	    				height="200" width="200" 
-	    				style={{"margin":"auto", "display":"block"}}
-	    				/>
+        			<BarraYDrawer />
+        			<Switch>
+                    <div 
+                        style={{paddingTop:"60px"}}
+                        >
 
-	    			<Divider/>
-	                <Lorem />
+        				<Route exact path="/" component={Lorem} />
+                        <Route path="/buscar" component={PaginaBusqueda} />
+
+                    </div>
+        			</Switch>
         		</div>
         	);
     }
