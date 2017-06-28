@@ -1,7 +1,8 @@
 node_modules/
-public/inmo.js
-yarn.lock
-yarn-error.log
+dist/
+.env
+.DS_Store
+npm-debug.log
 .firebaserc
 firebase.json
-.vscode/
+yarn-error.log
