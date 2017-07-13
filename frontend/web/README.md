@@ -257,7 +257,7 @@ Busqueda con mapa interactiva de inmuebles.
 
 ##### 1.21 - Chat. 🚧
 Pantalla donde se vean los usuarios que se siguen, y se permita seleccionar uno para enviar mensaje.
-
+Plantila similar a la de www.messenger.com (El chat de facebook)
 
 ---
 ## 2. Por Considerar
