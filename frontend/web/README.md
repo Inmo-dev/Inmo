@@ -234,10 +234,30 @@ Lista de inmuebles | Debe tener una imagen, el lugar, la indicacion del precio, 
 Filtros de ordenamiento por indicadores | Indicador de precio, inmobiliarias, comentarios, popularidad, etc.. | Sin asignar ❌
 
 ##### 1.18 - Configuracion. 🚧
+Configuraciones de usuario.
+
+_Usuario inmobiliaria:\*_
+
+Componente | Descripción | Estado  
+---|---|---
+\* Boton crear usuario | Ir a pantalla para crear empleado | Sin asignar ❌
+ Boton editar perfil | Ir a pantalla para editar perfil | Sin asignar ❌
+ Boton cambiar contraseña | Ir a pantalla para cambiar contraseña | Sin asignar ❌
+ Boton cambiar correo | Ir a pantalla para cambiar correo | Sin asignar ❌
+\* Checkbox desactivar chat | Controla visibilidad del chat | Sin asignar ❌
+
+
 ##### 1.19 - Editar inmueble. 🚧
+Permite editar un inmueble. 
+
+Misma pantalla de crear inmueble.
+
 ##### 1.20 - Busqueda interactiva. 🚧
-##### 1.21 - Denunciar publicación. 🚧
-##### 1.22 - Chat. 🚧
+Busqueda con mapa interactiva de inmuebles.
+
+##### 1.21 - Chat. 🚧
+Pantalla donde se vean los usuarios que se siguen, y se permita seleccionar uno para enviar mensaje.
+
 
 ---
 ## 2. Por Considerar
